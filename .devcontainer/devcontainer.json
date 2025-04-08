@@ -1,0 +1,12 @@
+{
+  "name": "Clinical Data Lakehouse",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "python.pythonPath": "/usr/local/bin/python3"
+  },
+  "extensions": ["ms-python.python", "jupyter"],
+  "mounts": [
+    "source=${workspaceFolder}/warehouse,target=/workspace/warehouse,type=bind"
+  ],
+  "runArgs": ["--gpus", "all"]
+}
